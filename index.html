@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Área Tech</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+        }
+        input[type="text"], input[type="email"], input[type="number"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .note {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Profissional Tech</h1>
+        <form id="cadastroForm" onsubmit="redirecionar(event)">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+            <label for="cargo">Cargo:</label>
+            <input type="text" id="cargo" name="cargo" placeholder="Digite seu cargo atual" required>
+
+            <label for="tecnologias">Tecnologias Conhecidas:</label>
+            <input type="text" id="tecnologias" name="tecnologias" placeholder="Ex: JavaScript, Python, React" required>
+
+            <label for="experiencia">Experiência (em anos):</label>
+            <input type="number" id="experiencia" name="experiencia" placeholder="Quantos anos de experiência?" required>
+
+            <label for="descricao">Descrição do Perfil:</label>
+            <textarea id="descricao" name="descricao" rows="4" placeholder="Descreva um pouco sobre sua experiência e habilidades..."></textarea>
+
+            <input type="submit" value="Cadastrar">
+        </form>
+        <div class="note">
+            <p><strong>Atenção:</strong> Este formulário é apenas para fins ilustrativos. Nenhum dado será realmente salvo ou processado.</p>
+        </div>
+    </div>
+
+    <script>
+        function redirecionar(event) {
+            event.preventDefault(); // Impede o envio real do formulário
+            window.location.href = "sucesso.html"; // Redireciona para a página de sucesso
+        }
+    </script>
+</body>
+</html>
